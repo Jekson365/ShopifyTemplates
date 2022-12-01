@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100&family=Brygada+1918:wght@600&family=Lobster&family=Montserrat:wght@100;400&family=Nunito:wght@200&family=Poppins&family=Quicksand:wght@400;100&family=Signika+Negative&display=swap');
+
+.each-slide {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-color: gray;
+}
+
+.unc {
+    width: 70%;
+    font-size: 50px;
+    font-family: 'Brygada 1918', serif;
+
+    .dif {
+        font-family: 'Brygada 1918', italic;
+
+    }
+
+    .gr {
+        font-family: 'Brygada 1918', serif;
+        color: rgb(109, 187, 109);
+    }
+}
+.st {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: underline !important;
+    padding-top: 40px;
+}
+@media screen and (max-width:900px) {
+    .sa {
+        height: fit-content !important;
+    }
+}

@@ -28,27 +28,26 @@ a {
 // active-navbar
 .active-navbar {
     width: 70vw; 
-    overflow: visible ;
+    overflow-x: visible ;
     transition: 0.3s;
 }
 .deactive-navbar {
     width: 0;
-    overflow: hidden;
+    overflow-y: scroll ;
     transition: 0.3s;
 }
 // active-navbar
 header {
-    position: fixed;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 6rem;
+    border-bottom: 2px solid black;
     .icon {
         position: absolute;
         left: 50%;
         margin-top: 10px;
-        top: 2%;
+        top: 1%;
         transform: translate(-50%,0);
     }
     @media screen and (max-width:1200px) {
