@@ -5,6 +5,7 @@
     width: 100%;
     background-size: cover;
     background-color: gray;
+    background-repeat: no-repeat;
 }
 
 .unc {
@@ -20,6 +21,26 @@
     .gr {
         font-family: 'Brygada 1918', serif;
         color: rgb(109, 187, 109);
+    }
+}
+.cs {
+    text-align: center;
+    width: 50% !important;
+    background-size: cover;
+    
+}
+.br {
+    border-top: 1px solid black;
+}
+.br-l {
+    border-left: 1px solid black;
+}
+.br-r {
+    border-right: 1px solid black;
+}
+@media screen and (max-width:768px) {
+    .cs {
+        width: 100% !important;
     }
 }
 .st {
