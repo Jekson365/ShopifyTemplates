@@ -14,7 +14,7 @@ export const TwoImages = () => {
         }
     ]
     return (
-        <div className='br d-flex flex-wrap' style={{ "minHeight": "100vh" }}>
+        <div className='br d-flex flex-wrap' style={{ "height": "100vh" }}>
             {items.map((each) => {
                 return (
                     <>

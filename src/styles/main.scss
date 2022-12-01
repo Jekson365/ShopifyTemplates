@@ -31,6 +31,7 @@ a {
     overflow-x: visible ;
     transition: 0.3s;
 }
+
 .deactive-navbar {
     width: 0;
     overflow-y: scroll ;
@@ -38,11 +39,15 @@ a {
 }
 // active-navbar
 header {
+    position: fixed;
+    z-index: 100;
+    background-color: white;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 6rem;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     .icon {
         position: absolute;
         left: 50%;

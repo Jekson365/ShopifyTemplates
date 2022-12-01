@@ -7,7 +7,6 @@
     background-color: gray;
     background-repeat: no-repeat;
 }
-
 .unc {
     width: 70%;
     font-size: 50px;
@@ -53,4 +52,8 @@
     .sa {
         height: fit-content !important;
     }
+}
+.cardd {
+    max-width: 335px !important;
+    max-height: 550px !important;
 }

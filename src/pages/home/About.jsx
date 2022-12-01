@@ -8,7 +8,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-import { Pagination, Navigation,Autoplay } from "swiper";
+import { Pagination, Navigation, Autoplay } from "swiper";
+import { Controls } from '../../components/Controls';
 
 const text = '...Uncodnitial love is a succumb to the emotion with every aspect of your being its light and its darkness its euphoria and its madness its life and death; allowing it to enter you entirely to consumer you; without boundires,without question without limits...'
 
@@ -21,11 +22,11 @@ export const About = () => {
                 spaceBetween={30}
                 loop={true}
                 autoplay={{
-                    deley:2000
+                    deley: 2000
                 }}
                 className="mySwiper sa"
                 modules={[Autoplay]}
-                style={{ "height": "100vh",'borderBottom':"1px solid black"}}
+                style={{ "height": "100vh", 'borderBottom': "1px solid black" }}
             >
                 {arr.map((each) => {
                     return (
@@ -42,7 +43,7 @@ export const About = () => {
                     )
                 })}
             </Swiper>
-
+            <Controls arr={arr}/>
         </>
     )
 }

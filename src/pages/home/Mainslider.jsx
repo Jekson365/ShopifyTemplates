@@ -5,11 +5,12 @@ import 'swiper/css'
 import "swiper/css/pagination";
 import 'swiper/css/navigation'
 import { useState } from 'react';
+import { Controls } from '../../components/Controls';
 
 export const Mainslider = () => {
     const sliderItems = [
         {
-            img: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            img: "https://images.pexels.com/photos/6712117/pexels-photo-6712117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         {
             img: "https://images.pexels.com/photos/1300571/pexels-photo-1300571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -31,6 +32,7 @@ export const Mainslider = () => {
                     )
                 })}
             </Swiper>
+            <Controls arr={sliderItems}/>
 
         </>
     )
