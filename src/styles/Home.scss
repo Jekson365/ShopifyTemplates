@@ -7,6 +7,7 @@
     background-color: gray;
     background-repeat: no-repeat;
 }
+
 .unc {
     width: 70%;
     font-size: 50px;
@@ -22,38 +23,71 @@
         color: rgb(109, 187, 109);
     }
 }
+
 .cs {
     text-align: center;
     width: 50% !important;
     background-size: cover;
-    
+
 }
+
 .br {
-    border-top: 1px solid black;
+    outline: 0.5px solid black;
 }
+
 .br-l {
-    border-left: 1px solid black;
+    outline: 0.5px solid black;
 }
+
 .br-r {
-    border-right: 1px solid black;
+    outline: 0.5px solid black;
 }
+
 @media screen and (max-width:768px) {
     .cs {
         width: 100% !important;
     }
+
+    .sub {
+        flex-direction: column !important;
+    }
 }
+
 .st {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: underline !important;
     padding-top: 40px;
 }
+
 @media screen and (max-width:900px) {
     .sa {
         height: fit-content !important;
     }
 }
+
 .cardd {
     max-width: 335px !important;
     max-height: 550px !important;
+}
+
+.sub {
+    input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: px solid white;
+        outline: 0;
+    }
+
+    input[type='text'] {
+        color: white;
+    }
+
+    button {
+        margin-left: 3px;
+        color: white;
+        border: 0;
+        background-color: transparent;
+        border-bottom: 1px solid white;
+    }
 }
