@@ -91,3 +91,33 @@
         border-bottom: 1px solid white;
     }
 }
+.sub-cats {
+    display: flex;
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 95px;
+    width: 100%;
+    flex-wrap: wrap;
+    min-width: 35vw;
+}
+.sub-cats {
+    opacity: 0;
+    transition: 0.3s;
+    outline: 1px solid black;
+}
+.nav-item:hover {
+    cursor: pointer;
+    border: 1px solid lawngreen;
+}
+
+.nav-item:hover .sub-cats  {
+    
+    opacity: 1;
+}
+.ar-btn {
+    transition: 0.3s;
+}
+.nav-item:hover .ar-btn {
+    transform: rotate(180deg);
+}

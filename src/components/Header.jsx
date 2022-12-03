@@ -4,28 +4,55 @@ import { FaSearch, FaTimes } from 'react-icons/fa'
 import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 export const Header = () => {
     const [active, setActive] = useState(true)
     const categories = [
         {
             name: "The active",
-            subCats: true,
+            subCats: [
+                {
+                    name: "",
+                    items: ['HIM', 'HER', 'THEM'],
+                    classN:"d-flex flex-row"
+                },
+                
+            ],
 
         },
         {
             name: "collection",
-            subCats: true
+            subCats: [
+                {
+                    name: "STEPED IN THE DARKNESS",
+                    items: ['HIM', 'HER', 'THEMM'],
+                },
+                {
+                    name: "BATHED IN LIGHT",
+                    items: ['HIM', 'HER', 'THEMM'],
+                },
+            ],
         },
         {
             name: "activewear",
-            subCats: true
+            subCats: [
+                {
+                    name: "",
+                    items: ['MENSWEAR','WOMENSWEAR'],
+                    classN:"d-flex"
+                },
+                
+            ]
         },
         {
             name: "accessories",
-            subCats: false
+            subCats: []
         }
     ]
+    const handleRotate = (current) => {
+        console.log(current)
+    }
     return (
         <>
             <header>
@@ -39,7 +66,30 @@ export const Header = () => {
                     {categories.map((each) => {
                         return (
                             <>
-                                <li className='nav-item fs-5'>{each.name} {each.subCats ? <IoIosArrowDown /> : ""}</li>
+                                <li className='nav-item fs-5'
+                                    onClick={(e) => handleRotate(e.target)}
+                                >{each.name} {each.subCats ? <IoIosArrowDown className='ar-btn' /> : ""}
+
+                                    <div className="sub-cats">
+                                        {each.subCats.map((sub) => {
+                                            return (
+                                                <div className='d-flex flex-column align-items-start'>
+                                                    <p className='p m-2'>{sub.name}</p>
+                                                    <div className={sub.classN}>
+
+                                                        {sub.items.map((itemName) => {
+                                                            return (
+                                                                <>
+                                                                    <li className='m-2'>{itemName}</li>
+                                                                </>
+                                                            )
+                                                        })}
+                                                    </div>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </li>
                             </>
                         )
                     })}

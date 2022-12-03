@@ -9,9 +9,7 @@ import { Footer } from '../components/Footer'
 import axios from 'axios'
 
 export const Home = () => {
-
-
-
+  
   return (
     <div>
       <Mainslider />
