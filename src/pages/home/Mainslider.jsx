@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { Controls } from '../../components/Controls';
 
 export const Mainslider = () => {
+    const [activeCircle,setActiveCircle] = useState(0)
     const sliderItems = [
         {
             img: "https://images.pexels.com/photos/6712117/pexels-photo-6712117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
@@ -18,10 +19,10 @@ export const Mainslider = () => {
     ]
     return (
         <>
-
             <Swiper
                 className='mySwiper'
                 style={{ 'height': "100vh" }}
+                modules={[Navigation]}
             >
                 {sliderItems.map((each) => {
                     return (
@@ -32,7 +33,7 @@ export const Mainslider = () => {
                     )
                 })}
             </Swiper>
-            <Controls arr={sliderItems}/>
+            <Controls arr={sliderItems}  current={activeCircle}/>
 
         </>
     )

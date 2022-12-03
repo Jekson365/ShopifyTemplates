@@ -10,6 +10,8 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation, Autoplay } from "swiper";
 import { Controls } from '../../components/Controls';
+import { FaArrowRight } from 'react-icons/fa';
+import { HiArrowLongRight } from 'react-icons/hi2';
 
 const text = '...Uncodnitial love is a succumb to the emotion with every aspect of your being its light and its darkness its euphoria and its madness its life and death; allowing it to enter you entirely to consumer you; without boundires,without question without limits...'
 
@@ -38,12 +40,16 @@ export const About = () => {
                                 life and death; allowing it to enter you entirely
                                 to consumer you; without boundires,without question without limits...
                             </h1>
-                            <p className='fs-6 st'>our story</p>
+                            <p className='fs-6 st'>our story
+                                <span>
+                                    <HiArrowLongRight className='fs-3' />
+                                </span>
+                            </p>
                         </SwiperSlide>
                     )
                 })}
             </Swiper>
-            <Controls arr={arr}/>
+            <Controls arr={arr} />
         </>
     )
 }

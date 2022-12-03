@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaLongArrowAltRight,FaLongArrowAltLeft } from 'react-icons/fa'
 
-export const Controls = ({arr}) => {
+export const Controls = ({arr,current}) => {
+
+    
     return (
         <div className='w-100 container-fluid br-b'>
             <div className="row w-100 d-flex justify-content-between p-4 align-items-center">
