@@ -8,13 +8,15 @@ import { useState } from 'react';
 import { Controls } from '../../components/Controls';
 
 export const Mainslider = () => {
-    const [activeCircle,setActiveCircle] = useState(0)
+    const [activeCircle, setActiveCircle] = useState(0)
     const sliderItems = [
         {
-            img: "https://images.pexels.com/photos/6712117/pexels-photo-6712117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            img: "https://images.pexels.com/photos/6712117/pexels-photo-6712117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            active:false
         },
         {
-            img: "https://images.pexels.com/photos/1300571/pexels-photo-1300571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            img: "https://images.pexels.com/photos/1300571/pexels-photo-1300571.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            active:true
         }
     ]
     return (
@@ -22,6 +24,7 @@ export const Mainslider = () => {
             <Swiper
                 className='mySwiper'
                 style={{ 'height': "100vh" }}
+                onSlideChange={() => activeCircle > 0 ? setActiveCircle(activeCircle + 1) : activeCircle(activeCircle - 1)}
                 modules={[Navigation]}
             >
                 {sliderItems.map((each) => {
@@ -33,7 +36,7 @@ export const Mainslider = () => {
                     )
                 })}
             </Swiper>
-            <Controls arr={sliderItems}  current={activeCircle}/>
+            <Controls arr={sliderItems} index={activeCircle}/>
 
         </>
     )

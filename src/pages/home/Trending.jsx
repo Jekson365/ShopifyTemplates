@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaArrowLeft, FaArrowRight, FaLongArrowAltRight } from 'react-icons/fa'
 import { Subscirbe } from '../../components/Subscirbe'
 
 export const Trending = () => {
@@ -64,6 +65,13 @@ export const Trending = () => {
             )
           })}
         </div>
+      </div>
+      <div 
+    
+      className="view-all w-100 p-5 d-flex align-items-center justify-content-center">
+        <p 
+         style={{"borderBottom":"1px solid"}}
+        className="p">VIEW ALL <FaLongArrowAltRight className='pb-1 fs-4'/>  </p>
       </div>
       <Subscirbe />
     </div>

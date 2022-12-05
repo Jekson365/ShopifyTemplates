@@ -16,7 +16,7 @@ import { HiArrowLongRight } from 'react-icons/hi2';
 const text = '...Uncodnitial love is a succumb to the emotion with every aspect of your being its light and its darkness its euphoria and its madness its life and death; allowing it to enter you entirely to consumer you; without boundires,without question without limits...'
 
 export const About = () => {
-    const arr = [1, 1, 1, 1]
+    const arr = [0, 0, 0, 1]
     return (
         <>
             <Swiper
@@ -32,7 +32,7 @@ export const About = () => {
             >
                 {arr.map((each) => {
                     return (
-                        <SwiperSlide className='d-flex h-100 flex-column align-items-center justify-content-between text-center '>
+                        <SwiperSlide className='d-flex h-100 flex-column align-items-center justify-content-around text-center '>
                             <h1 className='unc pt-5'>
                                 <span className='dif'>...Uncodnitial</span> love is a succumb to the emotion
                                 with every aspect of your being its <span className='gr'>light</span> and

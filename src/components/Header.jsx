@@ -5,9 +5,11 @@ import { IoIosArrowDown } from 'react-icons/io'
 import { FaBars } from 'react-icons/fa'
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Search } from './Search';
 
 export const Header = () => {
     const [active, setActive] = useState(true)
+    const [search, setSearch] = useState(false)
     const categories = [
         {
             name: "The active",
@@ -15,9 +17,9 @@ export const Header = () => {
                 {
                     name: "",
                     items: ['HIM', 'HER', 'THEM'],
-                    classN:"d-flex flex-row"
+                    classN: "d-flex flex-row"
                 },
-                
+
             ],
 
         },
@@ -39,10 +41,10 @@ export const Header = () => {
             subCats: [
                 {
                     name: "",
-                    items: ['MENSWEAR','WOMENSWEAR'],
-                    classN:"d-flex"
+                    items: ['MENSWEAR', 'WOMENSWEAR'],
+                    classN: "d-flex"
                 },
-                
+
             ]
         },
         {
@@ -74,7 +76,7 @@ export const Header = () => {
                                         {each.subCats.map((sub) => {
                                             return (
                                                 <div className='d-flex flex-column align-items-start'>
-                                                    <p className='p m-2'>{sub.name}</p>
+                                                    <p className='p m-2'>{sub.name ? sub.name : ""}</p>
                                                     <div className={sub.classN}>
 
                                                         {sub.items.map((itemName) => {
@@ -113,13 +115,14 @@ export const Header = () => {
                         <AiOutlineUser className='hd' />
                     </li>
                     <li className='nav-item fs-3'>
-                        <FaSearch />
+                        <FaSearch onClick={() => setSearch(!search)} />
                     </li>
                     <li className='nav-item fs-3'>
                         <AiFillShopping />
                     </li>
                 </nav>
             </header>
+            <Search search={search} changeSearch={setSearch} />
         </>
     )
 }

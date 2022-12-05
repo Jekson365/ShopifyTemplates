@@ -121,3 +121,11 @@
 .nav-item:hover .ar-btn {
     transform: rotate(180deg);
 }
+.daxma {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    top: 96px;
+    transition: 0.3s;
+    outline: 1px solid black;
+}
